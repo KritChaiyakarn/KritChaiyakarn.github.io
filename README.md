@@ -1,4 +1,4 @@
-![download banner](./banner1.jpg)
+
 
 
 # สมุดบันทึก
