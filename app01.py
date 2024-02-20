@@ -1,4 +1,3 @@
-import streamlit as st
+import diffusers
 
-st.header('My OOP Notebook')
-#streamlit run streamlit/app01.py
+print(diffusers.__version__)

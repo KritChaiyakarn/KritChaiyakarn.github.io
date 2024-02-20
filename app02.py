@@ -1,10 +1,12 @@
-# streamlit run app02.py
-import streamlit as st
+import diffusers
+from PIL import Image, ImageDraw, ImageFont
 
-st.title('OOP in ML')
-st.sidebar.text('Sidebar')
-st.sidebar.button('go>')
-st.sidebar.button('went>')
-st.sidebar.button('gone>')
-st.image('./banner.jpg')
-st.text_input('What your name?')
+def text_to_image(text, diffusers_model):
+    diffusers = diffusers.load_diffusers(diffusers_model)
+    image_data = diffusers.generate(text)
+    image = Image.fromarray(image_data)
+    image.show()
+
+if __name__=="__main__":
+    input_text = "Hello, World"
+    diffusers_model = ".."
