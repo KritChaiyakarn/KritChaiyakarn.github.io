@@ -14,7 +14,14 @@ git status
 git add
 git commit
 ```
+## run
 
+```
+pyton pygame/app01.py
+python pyside6/app01.py
+streamlit run streamlit/app01.py
+
+```
 ## คำสั่ง python พื้นฐาน
 
 ```
@@ -45,3 +52,11 @@ venv/scripts/activate
 5.ติดตั้ง streamlit
 
 pip install streamlit
+
+# diffusers
+
+```
+pip install --upgrade diffusers[torch]
+pip install --upgrade transformers
+
+```
