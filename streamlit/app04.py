@@ -8,6 +8,11 @@ s = st.subheader('เว็บไซต์สำหรับแปลงข้�
 p = st.write('เว็บไซต์นี้แลกมาด้วยหยาดเหงือและความอดทน')
 text = st.text_input('promt: ')
 if text:
-    dp = DP.from_pretrained()
-    st.image('https://picsum.photos/400/200')
+    dp = DP.from_pretrained(
+        "runaway/stable-diffusion-v1-5",
+        torch_dtype=torch.float16)
+    image_data = dp(text).images[0]
+    image = Image.fromarray(image_data)
+    iamge.show()
+    #st.image('https://picsum.photos/400/200')
     b = st.button('จะไปต่อหรือ. . .')
